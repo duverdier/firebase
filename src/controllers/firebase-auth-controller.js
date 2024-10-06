@@ -29,6 +29,7 @@ class FirebaseAuthController {
           });
       })
       .catch((error) => {
+        console.log('error: ', error);
         const errorMessage = error.message || "An error occurred while registering user";
         res.status(500).json({ error: errorMessage });
       });
